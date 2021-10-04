@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Title</title>
+    <meta name="description" content="Description"/>
+    <meta name="keywords" content="Keywords">
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="images/logo.png" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <button class="hamburger-btn">
+                        <!-- <img src="images/hamburger.png" alt="hamburger" class="hamburger-img"> -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="navbar">
+                    <div class="navbar-bg">
+                        <ul class="navbar-block">
+                            <li>
+                                <a href="index.html" class="navbar-link active">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#collapsed-categories" class="navbar-link" id="category-btn" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapsed-categories">Категории <span class="collapsed-trigger">+</span></a>
+                                <ul class="categories collapse" id="collapsed-categories">
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Корма для аквариумных рыб</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Aквариумные удобрения</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Борьба с водорослями</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Аквариумные тесты</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Подготовка воды</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Грунт для растений</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalogue.html" class="categories-link">Борьба с вредителями</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about.html#about-us" class="navbar-link">О нас</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="navbar-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <ul class="languages">
+                            <li>
+                                <a href="#" class="lang-link active">RU</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-link">UA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-link">EN</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-link">PL</a>
+                            </li>
+                        </ul>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="social-link">
+                                    <img src="images/yt.png" alt="youtube" class="social-img">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-link">
+                                    <img src="images/insta.png" alt="instagram" class="social-img">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="slider" id="slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="left-block">
+                    <button class="play-btn">
+                        <img src="images/play-btn.png" alt="play" class="play-img">
+                    </button>
+                </div>
+                <div class="right-block">
+                    <h1 class="slider-title">Премиальный корм</h1>
+                    <p class="slider-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </p>
+                    <a href="#" class="btn-link">
+                        Подробнее
+                    </a>
+                    <img src="images/product1.png" alt="product" class="slider-product">
+                    <ul class="slider-socials">
+                        <li>
+                            <a href="#" class="slider-social-link">
+                                <img src="images/yt.png" alt="youtube" class="slider-social-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="slider-social-link">
+                                <img src="images/insta.png" alt="instagram" class="slider-social-img">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="lang">RU</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category" id="category">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="category-title">Авторские разработки которым доверяют</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category1.png" alt="category1" class="category-img">
+                        <span>Корма для аквариумных рыб</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category2.png" alt="category1" class="category-img">
+                        <span>Aквариумные удобрения</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category3.png" alt="category1" class="category-img">
+                        <span>Борьба с водорослями</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category4.png" alt="category1" class="category-img">
+                        <span>Аквариумные тесты</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category5.png" alt="category1" class="category-img">
+                        <span>Подготовка воды</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category6.png" alt="category1" class="category-img">
+                        <span>Грунт для растений</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category7.png" alt="category1" class="category-img">
+                        <span>Борьба с вредителями</span>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12 category-block">
+                    <a href="catalogue.html" class="category-link">
+                        <img src="images/category8.png" alt="category1" class="category-img">
+                        <span>Средства для прудов</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-logo" id="big-logo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <img src="images/color-logo.png" alt="big-logo" class="big-logo-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map" id="map">
+        <div class="container">
+            <div class="row">
+                <h2 class="map-title">Купить в зоомагазинах</h2>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-12 map-block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3743273.8403668148!2d30.95187152896911!3d48.90671684762149!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1632595265148!5m2!1sru!2sua" width="100%" height="560" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-lg-4 col-12 adress-block">
+                    <ul class="map-adress">
+                        <li class="map-city">Харьков
+                            <ul>
+                                <li>пр-т. Перемоги 70-Б</li>
+                                <li>вул.Бучми, 1-Б</li>
+                                <li>рынок ХТЗ, к-н 110</li>
+                                <li>просп.Московський, 216/3</li>
+                                <li>вул. Тракторобуд 105-Б</li>
+                                <li>вул. Новопрудна, 9-Б</li>
+                                <li>Центральний р-к лоток</li>
+                                <li>вул. Г.Праці, 39</li>
+                                <li>пр-т. Тракторобуд, 108</li>
+                                <li>пр-т. Фрунзе, 24/31</li>
+                                <li>вул.Блюхера, р-к Промінь</li>
+                            </ul>
+                        </li>
+                        <li class="map-city">Киев
+                            <ul>
+                                <li>пр-т. Перемоги 70-Б</li>
+                                <li>вул.Бучми, 1-Б</li>
+                                <li>рынок ХТЗ, к-н 110</li>
+                                <li>просп.Московський, 216/3</li>
+                                <li>вул. Тракторобуд 105-Б</li>
+                                <li>вул. Новопрудна, 9-Б</li>
+                                <li>Центральний р-к лоток</li>
+                                <li>вул. Г.Праці, 39</li>
+                                <li>пр-т. Тракторобуд, 108</li>
+                                <li>пр-т. Фрунзе, 24/31</li>
+                                <li>вул.Блюхера, р-к Промінь</li>
+                            </ul>
+                        </li>
+                        <li class="map-city">Одесса
+                            <ul>
+                                <li>пр-т. Перемоги 70-Б</li>
+                                <li>вул.Бучми, 1-Б</li>
+                                <li>рынок ХТЗ, к-н 110</li>
+                                <li>просп.Московський, 216/3</li>
+                                <li>вул. Тракторобуд 105-Б</li>
+                                <li>вул. Новопрудна, 9-Б</li>
+                                <li>Центральний р-к лоток</li>
+                                <li>вул. Г.Праці, 39</li>
+                                <li>пр-т. Тракторобуд, 108</li>
+                                <li>пр-т. Фрунзе, 24/31</li>
+                                <li>вул.Блюхера, р-к Промінь</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="partners-title">Купить в интернет-магазинах</h2>
+                </div>
+            </div>
+            <div class="row slider-partners">
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>                
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>                
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner1.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner2.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="partner-link">
+                        <img src="images/partner3.png" alt="partner logo" class="partner-img">
+                    </a>
+                </div>
+            </div>
+            <div class="slider-arrows"></div>
+        </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12 image-block">
+                    <img src="images/about-img.png" alt="about us" class="about-us-img">
+                </div>
+                <div class="col-lg-6 col-12 desc-block">
+                    <h3 class="about-us-title">
+                        О нас
+                    </h3>
+                    <p class="about-us-desc">
+                        AQUAYER - это динамично развивающаяся компания, основанная Сергеем Ермолаевым, кандидатом химических наук, автором научных публикаций, посвятившим более десяти лет научной деятельности. Сергей Ермолаев - разработчик всех препаратов для обслуживания аквариумов, которые выпускаются под торговой маркой AQUAYER.
+                        <br><br>Высокое качество продукции и доверие аквариумистов к разработкам Ермолаева стали фундаментом активного роста популярности продуктов AQUAYER. Ведь вся продукция производится по уникальным рецептурам при полном контроле автора на всех этапах производства.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 desc-block">
+                    <p class="about-us-desc">
+                        К настоящему времени мы производим товары в шести основных категориях для простого и качественного повседневного ухода за аквариумом и его обитателями, успешного выращивания здоровых и красивых аквариумных растений.
+                        <br><br>Компания AQUAYER постоянно ведет работу над новыми товарами для аквариумистов, основываясь на запросах как простых аквариумистов, так и владельцев зоомагазинов. 
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 image-block">
+                    <img src="images/lab-img.png" alt="about us" class="about-us-img">
+                </div>
+                <div class="col-lg-6 col-12 image-block">
+                    <img src="images/dev-img.png" alt="about us" class="about-us-img">
+                </div>
+                <div class="col-lg-6 col-12 desc-block">
+                    <p class="about-us-desc">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        <br><br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                        
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 desc-block">
+                    <p class="about-us-desc">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        <br><br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                        
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 image-block">
+                    <img src="images/creative-img.png" alt="about us" class="about-us-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="contacts-title">Контакты</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <ul>
+                        <li>
+                            <img src="images/location.png" alt="location" class="contact-icon">
+                            <p class="contact-desc">
+                                61001 г. Харьков, Украина пр. Московский, 301
+                            </p>
+                            <span>Адрес</span>
+                        </li>
+                        <li>
+                            <img src="images/user.png" alt="user" class="contact-icon">
+                            <p class="contact-desc">
+                                Юлия Ермолаева
+                            </p>
+                            <span>Менеджер по продажам</span>
+                        </li>
+                        <li>
+                            <img src="images/telephone.png" alt="telephone" class="contact-icon">
+                            <p class="contact-desc">
+                                +38 050 990 52 68
+                            </p>
+                            <span>Телефон</span>
+                        </li>
+                        <li>
+                            <img src="images/viber.png" alt="viber" class="contact-icon">
+                            <p class="contact-desc">
+                                +38 050 990 52 68
+                            </p>
+                            <span>Viber</span>
+                        </li>
+                        <li>
+                            <img src="images/mail.png" alt="mail" class="contact-icon">
+                            <p class="contact-desc">
+                                sale@aquayer.com
+                            </p>
+                            <span>e-mail</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <ul>
+                        <li>
+                            <img src="images/headphones.png" alt="headphones" class="contact-icon">
+                            <p class="contact-desc">
+                                +38 095 613 43 87
+                            </p>
+                            <span>Служба поддержки покупателей</span>
+                        </li>
+                        <li>
+                            <img src="images/mail.png" alt="mail" class="contact-icon">
+                            <p class="contact-desc">
+                                support@aquayer.com
+                            </p>
+                            <span>e-mail</span>
+                        </li>
+                        <li>
+                            <img src="images/clock.png" alt="clock" class="contact-icon">
+                            <p class="contact-desc">
+                                Пн-Пт 10:00-18:00
+                            </p>
+                            <span>Режим работы:</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <ul>
+                        <li>
+                            <img src="images/location.png" alt="location" class="contact-icon">
+                            <p class="contact-desc">
+                                г. Санкт-Петербург, Россия ул. Потапова, 2М
+                            </p>
+                            <span>Адрес</span>
+                        </li>
+                        <li>
+                            <img src="images/user.png" alt="user" class="contact-icon">
+                            <p class="contact-desc">
+                                Никита Гончаров
+                            </p>
+                            <span>Менеджер по продажам, Служба поддержки покупателей в России</span>
+                        </li>
+                        <li>
+                            <img src="images/telephone.png" alt="telephone" class="contact-icon">
+                            <p class="contact-desc">
+                                +7 (911) 792 91 91
+                            </p>
+                            <span>Телефон</span>
+                        </li>
+                        <li>
+                            <img src="images/mail.png" alt="mail" class="contact-icon">
+                            <p class="contact-desc">
+                                sale-ru@aquayer.com
+                            </p>
+                            <span>e-mail</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <ul>
+                        <li>
+                            <img src="images/viber.png" alt="viber" class="contact-icon">
+                            <p class="contact-desc">
+                                +7 (911) 792 91 91
+                            </p>
+                            <span>Viber</span>
+                        </li>
+                        <li>
+                            <img src="images/clock.png" alt="clock" class="contact-icon">
+                            <p class="contact-desc">
+                                Пн-Пт 10:00-18:00
+                            </p>
+                            <span>Режим работы:</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-form" id="get-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="get-form-title">Узнайте подробности сотрудничества, заполнив форму ниже</h2>
+                </div>
+                <form>
+                    <input type="text" name="name" id="name" placeholder="Ваше имя">
+                    <input type="text" name="phone" id="phone" placeholder="Телефон">
+                    <input type="text" name="e-mail" id="e-mail" placeholder="e-mail">
+                    <input type="button" class="btn-link" value="Запросить условия сотрудничества">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <img src="images/logo.png" alt="footer-logo" class="footer-logo-img">
+                </div>
+                <div class="col-12">
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <img src="images/insta.png" alt="instagram" class="footer-social-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <img src="images/yt.png" alt="youtube" class="footer-social-img">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <p class="copyright">
+                        Copywriting by AQUAYER 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
