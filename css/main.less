@@ -72,7 +72,7 @@ input, button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
     position: relative;
 
     .logo {
@@ -366,18 +366,20 @@ input, button {
     margin-bottom: -118px;
 
     .left-block {
-        background: url(../images/mail-left.png);
+        // background: url(../images/mail-left.png);
         background-size: cover;
         background-position: top center;
-        width: 30%;
+        // width: 30%;
         position: relative;
+        padding: 0;
+        margin-top: -50px;
     }
     
     .right-block {
         background: url(../images/main-right.png);
         background-size: cover;
         background-position: top center;
-        width: 70%;
+        // width: 70%;
         position: relative;
         padding-top: 160px;
         padding-bottom: 160px;
@@ -817,7 +819,7 @@ input, button {
         width: 100%;
         height: auto;
         position: relative;
-        z-index: 100;
+        z-index: 10;
         
     }
 
@@ -904,6 +906,7 @@ input, button {
 }
 
 .video-block {
+    position: relative;
     padding-top: 130px;
     padding-bottom: 120px;
 
@@ -960,6 +963,17 @@ input, button {
         border: 1px solid #2B2A29;
         background: rgba(234, 239, 244, 0.5);
         color: #2B2A29;
+        z-index: 0;
+    }
+
+    .block-name {
+        font-weight: bold;
+        font-size: 160px;
+        line-height: 180px;
+        color: #E7E7E7;
+        position: absolute;
+        bottom: 0;
+        right: 60px;
         z-index: 0;
     }
 }
@@ -1142,6 +1156,7 @@ input, button {
     }
 
     .slider-arrows {
+        margin-top: 50px;
         text-align: right;
     }
 
