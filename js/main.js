@@ -50,6 +50,7 @@ $(document).ready(function() {
 
     if ($('.slider-partners').length) {
         $('.slider-partners').slick({
+            mobileFirst: true,
             infinite: false,
             mobileFirst: true,
             slidesToShow: 1,
@@ -62,8 +63,41 @@ $(document).ready(function() {
             centerPadding: '0px',
             appendArrows: $('.slider-arrows'),
             prevArrow: '<button id="prev" type="button" class="slider-btn"> < </button>',
-            nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
+            nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>',
+            responsive: [
+                {
+                    breakpoint: 801,
+                    settings: {
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        rows: 1, 
+                        slidesPerRow: 4
+                      }
+                }
+            ]
         });
+    } else {
+        ;
+    }
+
+    if ($('.slider-contact').length) {
+        if ($(window).width() <= '800') {
+            $('.slider-contact').slick({
+                mobileFirst: true,
+                infinite: false,
+                mobileFirst: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                centerMode: true,
+                centerPadding: '0px',
+                appendArrows: $('.contact-arrows'),
+                prevArrow: '<button id="prev" type="button" class="slider-btn"> < </button>',
+                nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
+            });
+        }
     } else {
         ;
     }
