@@ -169,7 +169,7 @@ $(document).ready(function() {
                 nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
             });
 
-    var $slider2 = $('.video-slider-thmb')
+        var $slider2 = $('.video-slider-thmb')
             .on('init', function(slick) {
                 $('.video-slider-thmb').fadeIn(1000);
             })
@@ -184,13 +184,10 @@ $(document).ready(function() {
                 focusOnSelect: true
             });
 
-    //remove active class from all thumbnail slides
     $('.video-slider-thmb .slick-slide').removeClass('slick-active');
 
-    //set active class to first thumbnail slides
     $('.video-slider-thmb .slick-slide').eq(0).addClass('slick-active');
 
-    // On before slide change match active thumbnail to current slide
     $('.video-slider-main').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         var mySlideNumber = nextSlide;
         $('.video-slider-thmb .slick-slide').removeClass('slick-active');
@@ -205,15 +202,6 @@ $(document).ready(function() {
 
             me.slider = new slider($(this), options, sliderOptions, previewSliderOptions);
 
-            // stop slider
-            //me.slider.stop();
-
-            // start slider
-            //me.slider.start(index);
-
-            // get reference to slick slider
-            //me.slider.getSlick();
-
         });
     });
 
@@ -222,13 +210,9 @@ $(document).ready(function() {
         , slideSelector        : '.bJS_slider'
         , previewSlideSelector : '.bJS_previewSlider'
         , progressInterval     : ''
-            // add your own progressbar animation function to sync it i.e. with a video
-            // function will be called if the current preview slider item (".b_previewItem") has the data-customprogressbar="true" property set
         , onCustomProgressbar : function($slide, $progressbar) {}
     }
 
-        // slick slider options
-        // see: https://kenwheeler.github.io/slick/
     var sliderOptions = {
         slidesToShow   : 1,
         slidesToScroll : 1,
@@ -237,8 +221,6 @@ $(document).ready(function() {
         autoplay       : true
     }
 
-        // slick slider options
-        // see: https://kenwheeler.github.io/slick/
     var previewSliderOptions = {
         slidesToShow   : 3,
         slidesToScroll : 1,
