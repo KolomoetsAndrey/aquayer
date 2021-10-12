@@ -205,28 +205,64 @@ $(document).ready(function() {
         });
     });
 
-    var options = {
-        progressbarSelector    : '.bJS_progressbar'
-        , slideSelector        : '.bJS_slider'
-        , previewSlideSelector : '.bJS_previewSlider'
-        , progressInterval     : ''
-        , onCustomProgressbar : function($slide, $progressbar) {}
-    }
+        var options = {
+            progressbarSelector    : '.bJS_progressbar'
+            , slideSelector        : '.bJS_slider'
+            , previewSlideSelector : '.bJS_previewSlider'
+            , progressInterval     : ''
+            , onCustomProgressbar : function($slide, $progressbar) {}
+        }
 
-    var sliderOptions = {
-        slidesToShow   : 1,
-        slidesToScroll : 1,
-        arrows         : true,
-        fade           : true,
-        autoplay       : true
-    }
+        var sliderOptions = {
+            slidesToShow   : 1,
+            slidesToScroll : 1,
+            arrows         : true,
+            fade           : true,
+            autoplay       : true
+        }
 
-    var previewSliderOptions = {
-        slidesToShow   : 3,
-        slidesToScroll : 1,
-        dots           : false,
-        focusOnSelect  : true,
-        centerMode     : true
+        var previewSliderOptions = {
+            slidesToShow   : 3,
+            slidesToScroll : 1,
+            dots           : false,
+            focusOnSelect  : true,
+            centerMode     : true
+        }
     }
+});
+
+// Scrollbar    
+$(document).scroll(function (e) {
+    var scrollAmount = $(window).scrollTop();
+    var documentHeight = $(document).height();
+    var windowHeight = $(window).height();
+    var scrollPercent = (scrollAmount / (documentHeight - windowHeight)) * 100;
+
+    var product = 'О продукте';
+    var properties = 'Свойства';
+    var composition = 'Состав';
+    var recommendations = 'Рекомендации';
+    var video = 'Видео';
+    var map ='Зоомагазины';
+    var partners = 'Интернет-магазины';
+
+    if (scrollPercent < 14){
+        var catName = product;
+    } else if ( scrollPercent < 28) {
+        var catName = properties;
+    } else if ( scrollPercent < 42) {
+        var catName = composition;
+    } else if ( scrollPercent < 56) {
+        var catName = recommendations;
+    } else if ( scrollPercent < 70) {
+        var catName = video;
+    } else if ( scrollPercent < 84) {
+        var catName = map;
+    } else {
+        var catName = partners;
     }
+    
+    // For scrollbar 
+    $(".scrollball").css("top", "calc(" + scrollPercent + "% - 0px)");
+    $(".scrollball span").text(catName);
 });
