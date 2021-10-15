@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Catregory Titile Last word Size
     if ($('.category-title').length) {
         $('.category-title').each(function(index, element) {
             var heading = $(element);
@@ -10,10 +11,9 @@ $(document).ready(function() {
     
             heading.html([first_part, ' <span class="last-word">', cut_word, '</span>'].join(''));
         });
-    } else {
-        ;
-    }
+    };
 
+    // Hamburger Btn
     $('.hamburger-btn').click(function() {
 
         $mobileNav = $('.navbar');
@@ -34,6 +34,7 @@ $(document).ready(function() {
         $(this).toggleClass('open');
     });
 
+    // Category Btn in Menu
     $('#category-btn').click(function() {
 
         var categoryArea = $('#category-btn');
@@ -48,39 +49,46 @@ $(document).ready(function() {
         }
     });
 
+    // Partners Slider
     if ($('.slider-partners').length) {
-        $('.slider-partners').slick({
-            mobileFirst: true,
-            infinite: false,
-            mobileFirst: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            rows: 2, 
-            slidesPerRow: 7,
-            dots: true,
-            centerMode: true,
-            centerPadding: '0px',
-            appendArrows: $('.slider-arrows'),
-            prevArrow: '<button id="prev" type="button" class="slider-btn"> < </button>',
-            nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>',
-            responsive: [
-                {
-                    breakpoint: 801,
-                    settings: {
-                        infinite: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1, 
-                        slidesPerRow: 4
-                      }
-                }
-            ]
-        });
-    } else {
-        ;
-    }
+        if ($(window).width() >= '801') {
+            $('.slider-partners').slick({
+                mobileFirst: true,
+                infinite: false,
+                mobileFirst: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                rows: 2, 
+                slidesPerRow: 7,
+                dots: true,
+                centerMode: true,
+                centerPadding: '0px',
+                appendArrows: $('.slider-arrows'),
+                prevArrow: '<button id="prev" type="button" class="slider-btn"> < </button>',
+                nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
+            });
+        } else if ($(window).width() <= '800' ) {
+            $('.slider-partners').slick({
+                mobileFirst: true,
+                infinite: false,
+                mobileFirst: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                rows: 4, 
+                slidesPerRow: 2,
+                dots: true,
+                centerMode: true,
+                centerPadding: '0px',
+                appendArrows: $('.slider-arrows'),
+                prevArrow: '<button id="prev" type="button" class="slider-btn"> < </button>',
+                nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
+            });
+        }
+    };
 
+    // Contact Slider
     if ($('.slider-contact').length) {
         if ($(window).width() <= '800') {
             $('.slider-contact').slick({
@@ -98,9 +106,7 @@ $(document).ready(function() {
                 nextArrow: '<button id="next" type="button" class="slider-btn"> > </button>'
             });
         }
-    } else {
-        ;
-    }
+    };
 
     //Thumbnail Slider
     $('.slider-for').slick({
@@ -112,45 +118,17 @@ $(document).ready(function() {
     });
 
     $('.slider-nav').slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         arrows: false,
         slidesToScroll: 1,
         vertical:true,
         asNavFor: '.slider-for',
         dots: false,
         focusOnSelect: true,
-        verticalSwiping:true,
-        responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-              vertical: false,
-            }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            vertical: false,
-          }
-        },
-        {
-          breakpoint: 580,
-          settings: {
-            vertical: false,
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 380,
-          settings: {
-            vertical: false,
-            slidesToShow: 2,
-          }
-        }
-        ]
+        verticalSwiping: true
     });
 
-    // videoslider
+    // Video Slider
     if ( $('.video-slider-main').length ) {
         var $slider = $('.video-slider-main')
             .on('init', function(slick) {
@@ -195,7 +173,7 @@ $(document).ready(function() {
     });
     
     
-    // init slider
+    // Init Slider
     require(['js-sliderWithProgressbar'], function(slider) {
 
         $('.video-slider-main').each(function() {
@@ -232,37 +210,38 @@ $(document).ready(function() {
 });
 
 // Scrollbar    
-$(document).scroll(function (e) {
-    var scrollAmount = $(window).scrollTop();
-    var documentHeight = $(document).height();
-    var windowHeight = $(window).height();
-    var scrollPercent = (scrollAmount / (documentHeight - windowHeight)) * 100;
-
-    var product = 'О продукте';
-    var properties = 'Свойства';
-    var composition = 'Состав';
-    var recommendations = 'Рекомендации';
-    var video = 'Видео';
-    var map ='Зоомагазины';
-    var partners = 'Интернет-магазины';
-
-    if (scrollPercent < 14){
-        var catName = product;
-    } else if ( scrollPercent < 28) {
-        var catName = properties;
-    } else if ( scrollPercent < 42) {
-        var catName = composition;
-    } else if ( scrollPercent < 56) {
-        var catName = recommendations;
-    } else if ( scrollPercent < 70) {
-        var catName = video;
-    } else if ( scrollPercent < 84) {
-        var catName = map;
-    } else {
-        var catName = partners;
-    }
+if ($(window).width() >= '801') {
+    $(document).scroll(function (e) {
+        var scrollAmount = $(window).scrollTop();
+        var documentHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var scrollPercent = (scrollAmount / (documentHeight - windowHeight)) * 100;
     
-    // For scrollbar 
-    $(".scrollball").css("top", "calc(" + scrollPercent + "% - 0px)");
-    $(".scrollball span").text(catName);
-});
+        var product = 'О продукте';
+        var properties = 'Свойства';
+        var composition = 'Состав';
+        var recommendations = 'Рекомендации';
+        var video = 'Видео';
+        var map ='Зоомагазины';
+        var partners = 'Интернет-магазины';
+    
+        if (scrollPercent < 14){
+            var catName = product;
+        } else if ( scrollPercent < 28) {
+            var catName = properties;
+        } else if ( scrollPercent < 42) {
+            var catName = composition;
+        } else if ( scrollPercent < 56) {
+            var catName = recommendations;
+        } else if ( scrollPercent < 70) {
+            var catName = video;
+        } else if ( scrollPercent < 84) {
+            var catName = map;
+        } else {
+            var catName = partners;
+        }
+        
+        $(".scrollball").css("top", "calc(" + scrollPercent + "%)");
+        $(".scrollball span").text(catName);
+    });
+};
