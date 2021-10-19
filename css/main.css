@@ -1244,6 +1244,9 @@ button {
     width: 100%;
     padding: 0 30px;
   }
+  .map {
+    padding-bottom: 0;
+  }
   .map .map-title {
     font-size: 40px;
     text-align: center;
@@ -1296,6 +1299,37 @@ button {
   }
   .scrollbar {
     display: none;
+  }
+}
+@media (max-width: 696px) {
+  .product-card .descr-block {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .product-card .block-name {
+    display: none;
+  }
+  .properties .block-name {
+    display: none;
+  }
+  .composition .block-name {
+    display: none;
+  }
+  .recommendations .block-name {
+    display: none;
+  }
+  .video-block {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  .video-block .block-name {
+    display: none;
+  }
+  .video-block .video-slider-arrows {
+    justify-content: right;
+    padding: 0;
   }
 }
 @media (max-width: 480px) {

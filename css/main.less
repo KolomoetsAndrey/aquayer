@@ -1503,6 +1503,8 @@ input, button {
     }
 
     .map  {
+        padding-bottom: 0;
+        
         .map-title {
             font-size: 40px;
             text-align: center;
@@ -1570,6 +1572,55 @@ input, button {
 
     .scrollbar {
         display: none;
+    }
+}
+
+@media (max-width: 696px) {
+    .product-card {
+        .descr-block {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+        
+        .block-name {
+            display: none;
+        }
+    }
+
+    .properties {
+        .block-name {
+            display: none;
+        }
+    }
+
+    .composition {
+        .block-name {
+            display: none;
+        }
+    }
+
+    .recommendations {
+        .block-name {
+            display: none;
+        }
+    }
+
+    .video-block {
+        padding-top: 100px;
+        padding-bottom: 60px;
+
+        .block-name {
+            display: none;
+        }
+    }
+
+    .video-block {
+        .video-slider-arrows {
+            justify-content: right;
+            padding: 0;
+        }
     }
 }
 

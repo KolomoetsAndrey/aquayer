@@ -162,26 +162,25 @@ $(document).ready(function() {
                 focusOnSelect: true
             });
 
-    $('.video-slider-thmb .slick-slide').removeClass('slick-active');
-
-    $('.video-slider-thmb .slick-slide').eq(0).addClass('slick-active');
-
-    $('.video-slider-main').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        var mySlideNumber = nextSlide;
+        // // Init Slider
         $('.video-slider-thmb .slick-slide').removeClass('slick-active');
-        $('.video-slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
-    });
-    
-    
-    // Init Slider
-    require(['js-sliderWithProgressbar'], function(slider) {
 
-        $('.video-slider-main').each(function() {
+        $('.video-slider-thmb .slick-slide').eq(0).addClass('slick-active');
 
-            me.slider = new slider($(this), options, sliderOptions, previewSliderOptions);
-
+        $('.video-slider-main').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var mySlideNumber = nextSlide;
+            $('.video-slider-thmb .slick-slide').removeClass('slick-active');
+            $('.video-slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
         });
-    });
+        
+        require(['js-sliderWithProgressbar'], function(slider) {
+
+            $('.video-slider-main').each(function() {
+
+                me.slider = new slider($(this), options, sliderOptions, previewSliderOptions);
+
+            });
+        });
 
         var options = {
             progressbarSelector    : '.bJS_progressbar'
@@ -207,6 +206,21 @@ $(document).ready(function() {
             centerMode     : true
         }
     }
+
+    // Collapse
+    $('#collapseBtn').click(function() {
+        function getShowed() {
+            var collapsedBlock = $('#aboutCollapse');
+
+            if (collapsedBlock.hasClass('show')) {
+                $('#collapseBtn').css('display', 'none');
+            } else {
+                $('#collapseBtn').css('display', 'block');    
+            }
+        };
+
+        setTimeout(getShowed, 2000);
+    });
 });
 
 // Scrollbar    
