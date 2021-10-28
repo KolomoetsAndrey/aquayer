@@ -800,6 +800,12 @@ button {
   font-size: 60px;
   line-height: 90px;
   color: #2B2A29;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
 }
 .category .last-word {
   font-size: 100px;
@@ -1149,6 +1155,9 @@ button {
   .slider .slider-product {
     right: 130px;
   }
+  .category .category-title {
+    max-width: 1140px;
+  }
 }
 @media (max-width: 1200px) {
   .slider .left-block {
@@ -1158,22 +1167,16 @@ button {
     top: -190px;
     right: 34%;
   }
+  .category .category-title {
+    max-width: 1140px;
+  }
 }
 @media (max-width: 1024px) {
-  .category {
-    display: flex;
-    flex-direction: column;
-  }
-  .category .title-container {
-    order: 0;
-  }
-  .category .category-container {
-    order: 1;
-  }
   .category .category-title {
     margin-bottom: 80px;
     font-size: 40px;
     line-height: 40px;
+    max-width: 720px;
   }
   .category .last-word {
     font-size: 80px;
@@ -1249,6 +1252,7 @@ button {
   .category .category-title {
     font-style: 40px;
     text-align: center;
+    max-width: 540px;
   }
   .category .category-block {
     margin: 10px 0;

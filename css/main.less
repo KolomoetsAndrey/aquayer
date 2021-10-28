@@ -938,6 +938,12 @@ input, button {
         font-size: 60px;
         line-height: 90px;
         color: #2B2A29;
+        width: 100%;
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
     }
 
     .last-word {
@@ -1355,6 +1361,12 @@ input, button {
             right: 130px;
         }
     }
+
+    .category {
+        .category-title {
+            max-width: 1140px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1368,25 +1380,21 @@ input, button {
             right: 34%;
         }
     }
+
+    .category {
+        .category-title {
+            max-width: 1140px;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
     .category {
-        display: flex;
-        flex-direction: column;
-
-        .title-container {
-            order: 0;
-        }
-
-        .category-container {
-            order: 1;
-        }
-
         .category-title {
             margin-bottom: 80px;
             font-size: 40px;
             line-height: 40px;
+            max-width: 720px;
         }
 
         .last-word {
@@ -1506,6 +1514,7 @@ input, button {
         .category-title {
             font-style: 40px;
             text-align: center;
+            max-width: 540px;
         }
 
         .category-block {

@@ -49,6 +49,7 @@ $(document).ready(function() {
         }
     });
 
+
     // Partners Slider
     if ($('.slider-partners').length) {
         if ($(window).width() >= '801') {
