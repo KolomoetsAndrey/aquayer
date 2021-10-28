@@ -43,7 +43,7 @@
                                 <a href="index.html" class="navbar-link active">Главная</a>
                             </li>
                             <li>
-                                <a href="#collapsed-categories" class="navbar-link" id="category-btn" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapsed-categories">Категории <span class="collapsed-trigger">+</span></a>
+                                <a href="#collapsed-categories" class="navbar-link collapsing" id="category-btn" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapsed-categories">Категории <span class="collapsed-trigger">+</span></a>
                                 <ul class="categories collapse" id="collapsed-categories">
                                     <li>
                                         <a href="catalogue.html" class="categories-link">Корма для аквариумных рыб</a>
@@ -69,10 +69,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="about.html#about-us" class="navbar-link">О нас</a>
+                                <a href="index.html#about-us" class="navbar-link">О нас</a>
                             </li>
                             <li>
-                                <a href="about.html#about-us" class="navbar-link">Контакты</a>
+                                <a href="index.html#contacts" class="navbar-link">Контакты</a>
                             </li>
                         </ul>
                         <ul class="languages">
@@ -133,10 +133,15 @@
                       }
                     </script> -->
 
-                    <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/wB8VpnfnNY8?controls=0&fs=0&modestbranding=0&disablekb=1&showinfo=0&showtitle=1&showinfo=0" frameborder="0" allowtransparency="true" allowfullscreen></iframe>
+                    <!-- <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/wB8VpnfnNY8?controls=0&fs=0&modestbranding=0&disablekb=1&showinfo=0&showtitle=1&showinfo=0" frameborder="0" allowtransparency="true" allowfullscreen></iframe> -->
                     <!-- <button class="play-btn">
                         <img src="images/play-btn.png" alt="play" class="play-img">
                     </button> -->
+
+                    <video autoplay muted loop class="my-video" id="myVideo">
+                        <source src="video/header.mp4" type="video/mp4">
+                    </video>
+
                 </div>
                 <div class="col-xl-8 col-12 right-block">
                     <h1 class="slider-title">Премиальный <br>корм</h1>

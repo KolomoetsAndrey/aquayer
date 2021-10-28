@@ -68,6 +68,11 @@ input, button {
     }
 }
 
+.my-video {
+    position: relative;
+    top: 75px;;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -373,6 +378,7 @@ input, button {
         position: relative;
         padding: 0;
         margin-top: -50px;
+        overflow: hidden;
     }
     
     .right-block {
@@ -1356,6 +1362,10 @@ input, button {
     }
 
 @media (max-width: 1366px) {
+    .my-video {
+        left: -150px;
+    }
+
     .slider {
         .slider-product {
             right: 130px;
@@ -1370,9 +1380,13 @@ input, button {
 }
 
 @media (max-width: 1200px) {
+    .my-video {
+        left: 0;    
+    }
+
     .slider {
         .left-block {
-            height: 500px;
+            // height: 500px;
         }
 
         .slider-product {
@@ -1436,6 +1450,11 @@ input, button {
 }
 
 @media (max-width: 800px) {
+    .my-video {
+        top: 50px;
+        max-height: 800px;
+    }
+
     .header {
         .navbar {
             .navbar-bg {
@@ -1603,6 +1622,10 @@ input, button {
 }
 
 @media (max-width: 696px) {
+    .my-video {
+        max-height: 500px;
+    }
+
     .product-card {
         .descr-block {
             padding-left: 0;

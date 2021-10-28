@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    // Video
+    if ($(window).width() >= '1200' ) {
+        var topBlockHeight = $('.right-block').outerHeight();
+        $('.my-video').css("height", topBlockHeight + "px");
+    } else if ($(window).width() <= '1200' ) {
+        var topBlockHeight = $('.right-block').outerHeight();
+        $('.left-block').css("max-height", topBlockHeight + "px");
+    }
+
     // Catregory Titile Last word Size
     if ($('.category-title').length) {
         $('.category-title').each(function(index, element) {
@@ -34,9 +43,29 @@ $(document).ready(function() {
         $(this).toggleClass('open');
     });
 
+    // Close Menu
+    $('.navbar-block a').each(function() {
+        $(this).on("click", function() {
+
+            if ($(this).hasClass('collapsing')) {
+                //do nothing
+            } else {
+                setTimeout(
+                    function() {
+                        $mobileNav = $('.navbar');
+                        $navbarBtn = $('.hamburger-btn');
+                        $navbarBtn.toggleClass('open');
+                        $mobileNav.css({"width": "0"});
+                        $mobileNav.css({"opacity": "0"});
+                        $mobileNav.css({"visibility": "hidden"});
+                    }, 200
+                )
+            }
+        });
+    })
+
     // Category Btn in Menu
     $('#category-btn').click(function() {
-
         var categoryArea = $('#category-btn');
         var categoryTgr = $('.collapsed-trigger');
         var openCat = '-';
@@ -48,7 +77,6 @@ $(document).ready(function() {
             categoryTgr.text(openCat);
         }
     });
-
 
     // Partners Slider
     if ($('.slider-partners').length) {
