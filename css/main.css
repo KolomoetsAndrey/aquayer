@@ -1,15 +1,17 @@
 @font-face {
-  font-family: 'CenturyGothic';
+  font-family: 'Century Gothic';
   font-weight: normal;
   font-style: normal;
   src: url('fonts/CenturyGothic.eot');
+  src: url('fonts/CenturyGothic.woff');
   src: url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), url('fonts/CenturyGothic.woff') format('woff'), url('fonts/CenturyGothic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'MyriadPro';
+  font-family: 'Myriad Pro';
   font-weight: normal;
   font-style: normal;
   src: url('fonts/MyriadPro-Regular.eot');
+  src: url('fonts/MyriadPro-Regular.woff');
   src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/MyriadPro-Regular.woff') format('woff'), url('fonts/MyriadPro-Regular.ttf') format('truetype');
 }
 :root {
@@ -38,6 +40,9 @@ button {
 .container-fluid {
   max-width: 1920px !important;
 }
+.container {
+  max-width: 1600px;
+}
 .btn-link {
   color: #FFFFFF;
   background: #E74444;
@@ -58,10 +63,6 @@ button {
 .btn-link:hover {
   color: #E74444;
   background: #FFFFFF;
-}
-.my-video {
-  position: relative;
-  top: 75px;
 }
 .header {
   display: flex;
@@ -317,6 +318,13 @@ button {
   z-index: 0;
   top: -118px;
   margin-bottom: -118px;
+  overflow: hidden;
+}
+.slider .video-bg {
+  min-width: 100%;
+  min-height: 600px;
+  position: absolute;
+  z-index: -1;
 }
 .slider .left-block {
   background-size: cover;
@@ -327,12 +335,25 @@ button {
   overflow: hidden;
 }
 .slider .right-block {
-  background: url(../images/main-right.png);
-  background-size: cover;
-  background-position: top center;
   position: relative;
+  display: block;
   padding-top: 160px;
   padding-bottom: 160px;
+  height: 100%;
+  width: 100%;
+}
+.slider .right-block::after {
+  background: url(../images/main-right.png);
+  background-size: cover;
+  background-position: center center;
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 .slider .play-btn {
   position: absolute;
@@ -353,7 +374,7 @@ button {
   margin-right: 140px;
 }
 .slider .slider-desc {
-  font-family: MyriadPro;
+  font-family: Myriad Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -368,7 +389,7 @@ button {
   max-width: 375px;
   position: absolute;
   bottom: 90px;
-  right: 210px;
+  right: 570px;
 }
 .slider .btn-link {
   margin-left: 60px;
@@ -527,7 +548,7 @@ button {
 .product-card .variants-block,
 .product-card .descr-block {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .product-card .image-block,
 .product-card .variants-block {
@@ -537,67 +558,69 @@ button {
   padding-left: 60px;
   padding-right: 60px;
 }
+.product-card .descr-block p {
+  font-family: Myriad Pro;
+  font-size: 16px;
+  line-height: 28px;
+  color: #2B2A29;
+}
+.product-card .image-block {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.product-card .image-block ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: -12px;
+}
 .product-card .image-block img {
-  width: 100% !important;
-  height: auto !important;
-}
-.product-card .image-block ul,
-.product-card .image-block li {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-.product-card .image-block p {
-  font-size: 14px;
-  line-height: 16px;
-  margin: 0;
-}
-.product-card .image-block .banner-slider {
-  margin-top: 100px;
-}
-.product-card .image-block .banner-slider .slider.slider-for {
-  max-width: 84%;
-  padding-left: 35px;
-}
-.product-card .image-block .banner-slider .slider.slider-nav {
-  max-width: 16%;
-}
-.product-card .image-block .banner-slider .slider.slider-for,
-.product-card .image-block .banner-slider .slider.slider-nav {
   width: 100%;
-  float: left;
+  height: auto;
+  max-width: 445px;
 }
-.product-card .image-block .banner-slider .slider.slider-nav {
-  height: 610px;
-  overflow: hidden;
+.product-card .image-block .nav-tabs {
+  border: none;
 }
-.product-card .image-block .slider-banner-image {
-  height: 610px;
+.product-card .image-block .nav-tabs .nav-item {
+  height: auto;
 }
-.product-card .image-block .banner-slider .slider.slider-nav {
-  padding: 20px 0 0;
+.product-card .image-block .nav-tabs .nav-link {
+  border-radius: 0 !important;
+  height: auto;
+  width: 77px;
+  color: #4D94B9;
+  font-size: 18px;
+  line-height: 20px;
+  border-bottom: 1px solid #4D94B9;
 }
-.product-card .image-block .slider-nav .slick-slide.thumbnail-image .thumbImg {
-  max-width: 178px;
-  height: 110px;
-  margin: 0 auto;
-  border: 1px solid #EBEBEB;
+.product-card .image-block .nav-tabs .nav-link:hover {
+  border-color: transparent;
+  border-bottom: 1px solid #4D94B9;
 }
-.product-card .image-block .slider-banner-image img,
-.product-card .image-block .slider-nav .slick-slide.thumbnail-image .thumbImg img {
-  height: 100%;
+.product-card .image-block .nav-tabs .nav-link.active {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 20px;
+  background: #4D94B9;
+  height: auto;
+}
+.product-card .image-block .tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  object-fit: cover;
 }
-.product-card .image-block .slick-vertical .slick-slide:active,
-.product-card .image-block .slick-vertical .slick-slide:focus,
-.product-card .image-block .slick-arrow:hover,
-.product-card .image-block .slick-arrow:focus {
-  border: 0;
-  outline: 0;
-}
-.product-card .image-block .slider-nav .slick-slide {
-  text-align: center;
+.product-card .image-block .block-name {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 70px;
+  color: #EFEFEF;
 }
 .product-card .variants {
   padding: 0;
@@ -617,29 +640,16 @@ button {
   line-height: 60px;
   color: #2B2A29;
 }
-.product-card .price-tag {
+.product-card .price-tag .price-tag-link {
   font-size: 20px;
   line-height: 20px;
   color: #4D94B9;
+  text-decoration: none;
 }
 .product-card .price-tag .price-tag-img {
   width: 25px;
   height: auto;
   margin-bottom: 3px;
-}
-.product-card .product-short-desc {
-  font-size: 16px;
-  line-height: 28px;
-  color: #2B2A29;
-}
-.product-card .block-name {
-  position: absolute;
-  bottom: 0;
-  left: 60px;
-  font-weight: bold;
-  font-size: 90px;
-  line-height: 120px;
-  color: #EFEFEF;
 }
 .properties {
   padding-top: 100px;
@@ -652,7 +662,11 @@ button {
   line-height: 60px;
   color: #2B2A29;
 }
-.properties .properties-desc {
+.properties .text-block {
+  padding-right: 35px;
+}
+.properties p {
+  font-family: Myriad Pro;
   font-size: 16px;
   line-height: 28px;
   color: #2B2A29;
@@ -682,7 +696,11 @@ button {
   line-height: 60px;
   color: #2B2A29;
 }
-.composition .composition-desc {
+.composition .text-block {
+  padding-left: 35px;
+}
+.composition p {
+  font-family: Myriad Pro;
   font-size: 16px;
   line-height: 28px;
   color: #2B2A29;
@@ -697,7 +715,7 @@ button {
   font-weight: bold;
   font-size: 160px;
   line-height: 180px;
-  color: #E7E7E7;
+  color: #F7F7F7;
   position: absolute;
   bottom: 0;
   right: 60px;
@@ -713,7 +731,11 @@ button {
   line-height: 60px;
   color: #2B2A29;
 }
-.recommendations .recommendations-desc {
+.recommendations .text-block {
+  padding-right: 35px;
+}
+.recommendations p {
+  font-family: Myriad Pro;
   font-size: 16px;
   line-height: 28px;
   color: #2B2A29;
@@ -789,7 +811,7 @@ button {
   font-weight: bold;
   font-size: 160px;
   line-height: 180px;
-  color: #E7E7E7;
+  color: #F7F7F7;
   position: absolute;
   bottom: 0;
   right: 60px;
@@ -915,7 +937,7 @@ button {
   margin-top: 30px;
 }
 .map .map-city ul li {
-  font-family: MyriadPro;
+  font-family: Myriad Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -1003,7 +1025,7 @@ button {
   margin-top: 25px;
 }
 .about-us .about-us-desc {
-  font-family: MyriadPro;
+  font-family: Myriad Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1042,7 +1064,7 @@ button {
   margin-right: 10px;
 }
 .contacts .contact-desc {
-  font-family: MyriadPro;
+  font-family: Myriad Pro;
   font-size: 20px;
   line-height: 32px;
   color: #2B2A29;
@@ -1156,9 +1178,14 @@ button {
   color: #2B2A29;
   writing-mode: tb-rl;
 }
+@media (max-width: 1640px) {
+  .container {
+    max-width: 1500px;
+  }
+}
 @media (max-width: 1366px) {
-  .my-video {
-    left: -150px;
+  .container {
+    max-width: 1200px;
   }
   .slider .slider-product {
     right: 130px;
@@ -1168,8 +1195,11 @@ button {
   }
 }
 @media (max-width: 1200px) {
-  .my-video {
-    left: 0;
+  .container {
+    max-width: 1100px;
+  }
+  .slider .left-block {
+    height: 500px;
   }
   .slider .slider-product {
     top: -190px;
@@ -1180,6 +1210,9 @@ button {
   }
 }
 @media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
   .category .category-title {
     margin-bottom: 80px;
     font-size: 40px;
@@ -1209,11 +1242,15 @@ button {
     bottom: -30px;
   }
 }
-@media (max-width: 800px) {
-  .my-video {
-    top: 50px;
-    max-height: 800px;
+@media (max-width: 990px) {
+  .about-us .image-block {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
   }
+  .about-us .desc-block {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+@media (max-width: 800px) {
   .header .navbar .navbar-bg {
     width: 100%;
   }
@@ -1331,9 +1368,6 @@ button {
   }
 }
 @media (max-width: 696px) {
-  .my-video {
-    max-height: 500px;
-  }
   .product-card .descr-block {
     padding-left: 0;
     padding-right: 0;

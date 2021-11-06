@@ -114,62 +114,58 @@
     <section class="product-card" id="product-card" data-category="О продукте">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-5 col-10 image-block">
-                    <div class="banner-slider">
-                        <div class="slider slider-nav thumb-image">
-                            <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="images/product1.png" alt="slider-img">
-                                </div>
-                            </div>
-                            <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="images/product1.png" alt="slider-img">
-                                </div>
-                            </div>
-                            <div class="thumbnail-image">
-                                <div class="thumbImg">
-                                    <img src="images/product1.png" alt="slider-img">
-                                </div>
-                            </div>
+                <div class="col-lg-5 col-12 image-block">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="150-tab" data-bs-toggle="tab" data-bs-target="#t150" type="button" role="tab" aria-controls="150" aria-selected="true">150 г</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="100-tab" data-bs-toggle="tab" data-bs-target="#t100" type="button" role="tab" aria-controls="100" aria-selected="false">100 г</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="80-tab" data-bs-toggle="tab" data-bs-target="#t80" type="button" role="tab" aria-controls="80" aria-selected="false">80 г</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="50-tab" data-bs-toggle="tab" data-bs-target="#t50" type="button" role="tab" aria-controls="50" aria-selected="false">50 г</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="10-tab" data-bs-toggle="tab" data-bs-target="#t10" type="button" role="tab" aria-controls="10" aria-selected="false">10 г</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="t150" role="tabpanel" aria-labelledby="150-tab">
+                            <img src="images/product1.png" alt=..." class="image-block-img">
                         </div>
-                        <div class="slider slider-for">
-                            <div class="slider-banner-image">
-                                <img src="images/product1.png" alt="Car-Image">
-                            </div> 
-                            <div class="slider-banner-image">
-                                <img src="images/product1.png" alt="Car-Image">
-                            </div> 
-                            <div class="slider-banner-image">
-                                <img src="images/product1.png" alt="Car-Image">
-                            </div> 
+                        <div class="tab-pane fade" id="t100" role="tabpanel" aria-labelledby="100-tab">
+                            <img src="images/product1.png" alt=..." class="image-block-img">
+                        </div>
+                        <div class="tab-pane fade" id="t80" role="tabpanel" aria-labelledby="80-tab">
+                            <img src="images/product1.png" alt=..." class="image-block-img">
+                        </div>
+                        <div class="tab-pane fade" id="t50" role="tabpanel" aria-labelledby="50-tab">
+                            <img src="images/product1.png" alt=..." class="image-block-img">
+                        </div>
+                        <div class="tab-pane fade" id="t10" role="tabpanel" aria-labelledby="10-tab">
+                            <img src="images/product1.png" alt=..." class="image-block-img">
                         </div>
                     </div>
+                    <span class="block-name">Корм для рыб</span>
                 </div>
-                <div class="col-lg-1 col-2 variants-block">
-                    <ul class="variants">
-                        <li>150 г</li>
-                        <li>200 г</li>
-                        <li>300 г</li>
-                        <li>100 г</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-12 descr-block">
+                <div class="col-lg-7 col-12 descr-block">
                     <div class="price-block">
                         <h1 class="product-title">
                             Премиальный корм <br><strong>Special mini granules</strong>
                         </h1>
-                        <p class="price-tag">
+                        <div class="price-tag">
                             <img src="images/price-tag.png" alt="price tag" class="price-tag-img">
-                            Корм для рыб
-                        </p>
-                        <p class="product-short-desc">
+                            <a href="#" class="price-tag-link">Корм для рыб</a>
+                        </div>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                         </p>
                     </div>
                 </div>
             </div>
-            <span class="block-name">Корм для рыб</span>
         </div>
     </section>
 
@@ -180,7 +176,7 @@
                     <h2 class="properties-title">
                         Свойства
                     </h2>
-                    <p class="properties-desc">
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                         <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                     </p>
@@ -203,7 +199,7 @@
                     <h2 class="composition-title">
                         Состав
                     </h2>
-                    <p class="composition-desc">
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                         <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                     </p>
@@ -220,7 +216,7 @@
                     <h2 class="recommendations-title">
                         Рекомендации
                     </h2>
-                    <p class="recommendations-desc">
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                         <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
                     </p>

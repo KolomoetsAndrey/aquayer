@@ -137,26 +137,6 @@ $(document).ready(function() {
         }
     };
 
-    //Thumbnail Slider
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        arrows: false,
-        slidesToScroll: 1,
-        vertical:true,
-        asNavFor: '.slider-for',
-        dots: false,
-        focusOnSelect: true,
-        verticalSwiping: true
-    });
-
     // Video Slider
     if ( $('.video-slider-main').length ) {
         var $slider = $('.video-slider-main')

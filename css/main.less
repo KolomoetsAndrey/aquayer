@@ -1,20 +1,22 @@
 @font-face
 {
-    font-family: 'CenturyGothic';
+    font-family: 'Century Gothic';
     font-weight: normal;
     font-style: normal;
 
     src: url('./fonts/CenturyGothic.eot');
+    src: url('./fonts/CenturyGothic.woff');
     src: url('./fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), url('./fonts/CenturyGothic.woff') format('woff'), url('./fonts/CenturyGothic.ttf') format('truetype');
 }
 
 @font-face
 {
-    font-family: 'MyriadPro';
+    font-family: 'Myriad Pro';
     font-weight: normal;
     font-style: normal;
 
     src: url('./fonts/MyriadPro-Regular.eot');
+    src: url('./fonts/MyriadPro-Regular.woff');
     src: url('./fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/MyriadPro-Regular.woff') format('woff'), url('./fonts/MyriadPro-Regular.ttf') format('truetype');
 }
 
@@ -45,6 +47,10 @@ input, button {
     max-width: 1920px !important;
 }
 
+.container {
+    max-width: 1600px;
+}
+
 .btn-link {
     color: #FFFFFF;
     background: #E74444;
@@ -66,11 +72,6 @@ input, button {
         color: #E74444;
         background: #FFFFFF;
     }
-}
-
-.my-video {
-    position: relative;
-    top: 75px;;
 }
 
 .header {
@@ -369,6 +370,14 @@ input, button {
     z-index: 0;
     top: -118px;
     margin-bottom: -118px;
+    overflow: hidden;
+
+    .video-bg {
+        min-width: 100%; 
+        min-height: 600px;
+        position: absolute;
+        z-index: -1;
+    }
 
     .left-block {
         // background: url(../images/mail-left.png);
@@ -382,13 +391,26 @@ input, button {
     }
     
     .right-block {
-        background: url(../images/main-right.png);
-        background-size: cover;
-        background-position: top center;
-        // width: 70%;
         position: relative;
+        display: block;
         padding-top: 160px;
         padding-bottom: 160px;
+        height: 100%;
+        width: 100%;
+
+        &::after {
+            background: url(../images/main-right.png);
+            background-size: cover;
+            background-position: center center;
+            content: "";
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;  
+        }
     }
 
     .play-btn {
@@ -413,7 +435,7 @@ input, button {
     }
 
     .slider-desc {
-        font-family: MyriadPro;
+        font-family: Myriad Pro;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -429,7 +451,7 @@ input, button {
         max-width: 375px;
         position: absolute;
         bottom: 90px;
-        right: 210px;
+        right: 570px;
     }
 
     .btn-link {
@@ -612,7 +634,7 @@ input, button {
 
     .image-block, .variants-block, .descr-block {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
 
     .image-block, .variants-block {
@@ -622,84 +644,80 @@ input, button {
     .descr-block {
         padding-left: 60px;
         padding-right: 60px;
+
+        p {
+            font-family: Myriad Pro;
+            font-size: 16px;
+            line-height: 28px;
+            color: #2B2A29;
+        }
     }
 
     .image-block {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            right: -12px;
+        }
+
         img {
-            width: 100% !important;
-            height: auto !important;
-        }
-        
-        
-        ul, li{
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 16px;
-            margin: 0;
-        }
-
-        .banner-slider {
-            margin-top: 100px;
-        }
-
-        .banner-slider .slider.slider-for {
-            max-width: 84%;
-            padding-left: 35px;
-        }
-
-        .banner-slider .slider.slider-nav {
-            max-width: 16%;
-        }
-
-        .banner-slider .slider.slider-for,
-        .banner-slider .slider.slider-nav {
             width: 100%;
-            float: left;
+            height: auto;
+            max-width: 445px;
         }
 
-        .banner-slider .slider.slider-nav {
-            height: 610px;
-            overflow: hidden;
-        
+        .nav-tabs {
+            border: none;
+
+            .nav-item {
+                height: auto;
+            }
+
+            .nav-link {
+                border-radius: 0 !important;
+                height: auto;
+                width: 77px;
+                color: #4D94B9;
+                font-size: 18px;
+                line-height: 20px;
+                border-bottom: 1px solid #4D94B9;
+
+                &:hover {
+                    border-color: transparent;
+                    border-bottom: 1px solid #4D94B9;
+                }
+            }
+
+            .nav-link.active {
+                color: #ffffff;
+                font-size: 18px;
+                line-height: 20px;
+                background: #4D94B9;
+                height: auto;
+            }
         }
 
-        .slider-banner-image {
-            height: 610px;
+        .tab-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
 
-        .banner-slider .slider.slider-nav {
-            padding: 20px 0 0;
-        }
-
-        .slider-nav .slick-slide.thumbnail-image .thumbImg{
-            max-width: 178px;
-            height: 110px;
-            margin: 0 auto;
-            border: 1px solid #EBEBEB;
-        }
-
-        .slider-banner-image img,
-        .slider-nav .slick-slide.thumbnail-image .thumbImg img {
-            height: 100%;
-            width:100%;
-            object-fit: cover;
-        }
-
-        .slick-vertical .slick-slide:active,
-        .slick-vertical .slick-slide:focus,
-        .slick-arrow:hover,
-        .slick-arrow:focus {
-            border: 0;
-            outline: 0;
-        }
-
-        .slider-nav .slick-slide {
-            text-align: center;
+        .block-name {
+            position: absolute;
+            bottom: 20px;
+            left: 60px;
+            font-weight: bold;
+            font-size: 90px;
+            line-height: 70px;
+            color: #EFEFEF;
         }
     }
 
@@ -725,31 +743,18 @@ input, button {
     }
 
     .price-tag {
-        font-size: 20px;
-        line-height: 20px;
-        color: #4D94B9;
+        .price-tag-link {
+            font-size: 20px;
+            line-height: 20px;
+            color: #4D94B9;
+            text-decoration: none;
+        }
 
         .price-tag-img {
             width: 25px;
             height: auto;
             margin-bottom: 3px;
         }
-    }
-
-    .product-short-desc {
-        font-size: 16px;
-        line-height: 28px;
-        color: #2B2A29;
-    }
-
-    .block-name {
-        position: absolute;
-        bottom: 0;
-        left: 60px;
-        font-weight: bold;
-        font-size: 90px;
-        line-height: 120px;
-        color: #EFEFEF;
     }
 }
 
@@ -765,7 +770,12 @@ input, button {
         color: #2B2A29;
     }
 
-    .properties-desc {
+    .text-block {
+        padding-right: 35px;
+    }
+
+    p {
+        font-family: Myriad Pro;
         font-size: 16px;
         line-height: 28px;
         color: #2B2A29;
@@ -801,7 +811,12 @@ input, button {
         color: #2B2A29;
     }
 
-    .composition-desc {
+    .text-block {
+        padding-left: 35px;
+    }
+
+    p {
+        font-family: Myriad Pro;
         font-size: 16px;
         line-height: 28px;
         color: #2B2A29;
@@ -818,7 +833,7 @@ input, button {
         font-weight: bold;
         font-size: 160px;
         line-height: 180px;
-        color: #E7E7E7;
+        color: #F7F7F7;
         position: absolute;
         bottom: 0;
         right: 60px;
@@ -837,7 +852,12 @@ input, button {
         color: #2B2A29;
     }
 
-    .recommendations-desc {
+    .text-block {
+        padding-right: 35px;
+    }
+
+    p {
+        font-family: Myriad Pro;
         font-size: 16px;
         line-height: 28px;
         color: #2B2A29;
@@ -926,7 +946,7 @@ input, button {
         font-weight: bold;
         font-size: 160px;
         line-height: 180px;
-        color: #E7E7E7;
+        color: #F7F7F7;
         position: absolute;
         bottom: 0;
         right: 60px;
@@ -1079,7 +1099,7 @@ input, button {
         margin-top: 30px;
 
         ul li {
-            font-family: MyriadPro;
+            font-family: Myriad Pro;
             font-style: normal;
             font-weight: normal;
             font-size: 15px;
@@ -1183,7 +1203,7 @@ input, button {
     }
 
     .about-us-desc {
-        font-family: MyriadPro;
+        font-family: Myriad Pro;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -1229,7 +1249,7 @@ input, button {
     }
 
     .contact-desc {
-        font-family: MyriadPro;
+        font-family: Myriad Pro;
         font-size: 20px;
         line-height: 32px;
         color: #2B2A29;
@@ -1359,11 +1379,17 @@ input, button {
             writing-mode: tb-rl;
         }
     }
+}
+
+@media (max-width: 1640px) {
+    .container {
+        max-width: 1500px;
     }
+}
 
 @media (max-width: 1366px) {
-    .my-video {
-        left: -150px;
+    .container {
+        max-width: 1200px;
     }
 
     .slider {
@@ -1380,13 +1406,13 @@ input, button {
 }
 
 @media (max-width: 1200px) {
-    .my-video {
-        left: 0;    
+    .container {
+        max-width: 1100px;
     }
 
     .slider {
         .left-block {
-            // height: 500px;
+            height: 500px;
         }
 
         .slider-product {
@@ -1403,6 +1429,10 @@ input, button {
 }
 
 @media (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
     .category {
         .category-title {
             margin-bottom: 80px;
@@ -1449,12 +1479,19 @@ input, button {
     }
 }
 
-@media (max-width: 800px) {
-    .my-video {
-        top: 50px;
-        max-height: 800px;
-    }
+@media (max-width: 990px) {
+    .about-us {
+        .image-block {
+            padding-right: calc(var(--bs-gutter-x) * .5);
+        }
 
+        .desc-block {
+            padding-left: calc(var(--bs-gutter-x) * .5);
+        }
+    }
+}
+
+@media (max-width: 800px) {
     .header {
         .navbar {
             .navbar-bg {
@@ -1622,9 +1659,9 @@ input, button {
 }
 
 @media (max-width: 696px) {
-    .my-video {
-        max-height: 500px;
-    }
+    // .my-video {
+    //     max-height: 500px;
+    // }
 
     .product-card {
         .descr-block {
