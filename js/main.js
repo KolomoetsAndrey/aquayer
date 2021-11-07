@@ -1,16 +1,14 @@
 $(document).ready(function() {
     // Video
-    if ($(window).width() >= '1200' ) {
-        var topBlockHeight = $('.right-block').outerHeight();
-        $('.my-video').css("height", topBlockHeight + "px");
-    } else if ($(window).width() <= '1200' ) {
-        var topBlockHeight = $('.right-block').outerHeight();
-        $('.left-block').css("max-height", topBlockHeight + "px");
+    if ($(window).width() > '1199' ) {
+        $('.slider h1 span').css('display', 'block');
+    } else if ($(window).width() <= '1199' ) {
+        $('.slider h1 span').css('display', 'inline');
     }
 
     // Catregory Titile Last word Size
-    if ($('.category-title').length) {
-        $('.category-title').each(function(index, element) {
+    if ($('.category h2').length) {
+        $('.category h2').each(function(index, element) {
             var heading = $(element);
             var word_array, cut_word, first_part;
     
