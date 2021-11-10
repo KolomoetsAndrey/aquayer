@@ -112,7 +112,6 @@
     </header>
 
     <section class="top-bg" id="top-img">
-
     </section>
 
     <section class="product-card" id="product-card" data-category="О продукте">
@@ -153,7 +152,7 @@
                             <img src="images/product1.png" alt=..." class="image-block-img">
                         </div>
                     </div>
-                    <span class="block-name">Корм для рыб</span>
+                    <span class="block-name">Борьба с водорослями</span>
                 </div>
                 <div class="col-lg-7 col-12 descr-block">
                     <div class="price-block">
@@ -169,6 +168,11 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="navigation-title">
+                | О продукте <span>| | | | | |</span>
             </div>
         </div>
     </section>
@@ -191,6 +195,11 @@
             </div>
         </div>
         <span class="block-name">Свойства</span>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | Свойства <span>| | | | |</span>
+            </div>
+        </div>
     </section>
 
     <section class="composition" id="composition" data-category="Состав">
@@ -211,6 +220,11 @@
             </div>
         </div>
         <span class="block-name">Состав</span>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | | Состав <span>| | | |</span>
+            </div>
+        </div>
     </section>
 
     <section class="recommendations" id="recommendations" data-category="Рекомендации">
@@ -218,7 +232,7 @@
             <div class="row">
                 <div class="col-lg-6 col-12 text-block">
                     <h2 class="recommendations-title">
-                        Рекомендации
+                        Инструкция
                     </h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
@@ -230,14 +244,39 @@
                 </div>
             </div>
         </div>
-        <span class="block-name">Рекомендации</span>
+        <span class="block-name">Инструкция</span>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | | | Инструкция <span>| | |</span>
+            </div>
+        </div>
     </section>
 
     <section class="video-block" id="video-block" data-category="Видео">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div id="video-slider">
+                    <div class="videoframe">
+                        <video id="bgVideo" height="400" width="100%" name="media" poster="images/videobg.png">
+                            <source src="http://aquayer.com/video/algizid-co2.mp4" type="video/mp4">
+                        </video>
+                        <button onclick="playPause()">
+                            <img id="playPause" src="images/play-btn.png" alt="..." class="playPause">
+                        </button> 
+                        <script>
+                            var myVideo = document.getElementById("bgVideo"); 
+                            function playPause() { 
+                                if (myVideo.paused) {
+                                    myVideo.play(); 
+                                    document.getElementById("playPause").src = "images/stop-btn.png";
+                                } else {
+                                    myVideo.pause();
+                                    document.getElementById("playPause").src = "images/play-btn.png";
+                                }
+                            };
+                        </script>
+                    </div>
+                    <!-- <div id="video-slider">
                         <div class="video-slider-main">
                             <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                             <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -251,9 +290,14 @@
                             <div class="slide"><img src="images/video-thumbnail.png" alt="" class="img-responsive"></div>
                         </div>
                         <div class="video-slider-arrows"></div>
-                    </div>
+                    </div> -->
                     <span class="block-name">Видео</span>
                 </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | | | | Видео <span>| |</span>
             </div>
         </div>
     </section>
@@ -318,6 +362,11 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | | | | | Зоомагазины <span>|</span>
             </div>
         </div>
     </section>
@@ -451,6 +500,11 @@
             </div>
             <div class="slider-arrows"></div>
         </div>
+        <div class="navigation">
+            <div class="navigation-title">
+                | | | | | | | Интернет-магазины<span></span>
+            </div>
+        </div>
     </section>
 
     <footer class="footer" id="footer">
@@ -471,6 +525,11 @@
                                 <img src="images/yt.png" alt="youtube" class="footer-social-img">
                             </a>
                         </li>
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <img src="images/site.png" alt="youtube" class="footer-social-img">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -486,11 +545,11 @@
     </footer>
 
     <!-- Scrollbar -->
-    <div class="scrollbar">
+    <!-- <div class="scrollbar">
         <div class="scrollball">
             <span></span>
         </div>
-    </div>
+    </div> -->
 
     <!-- Scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
