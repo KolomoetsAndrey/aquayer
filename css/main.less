@@ -1387,20 +1387,6 @@ input, button {
 //     }
 // }
 
-.navigation {
-    .navigation-title {
-        position: absolute;
-        right: 50px;
-        bottom: 50px;
-        color: #2B2A29;
-        writing-mode: tb-rl;
-        z-index: 500;
-
-        span {
-            color: #B8B8B8;
-        }
-    }
-}
 
 @media screen and (max-width: 1640px) {
     .container {
@@ -1707,41 +1693,46 @@ input, button {
 
     .product-card {
         .descr-block {
-            padding-left: 0;
-            padding-right: 0;
-            max-width: 540px;
+            width: 100%;
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
             margin: 0 auto;
         }
         
         .block-name {
-            display: none;
+            left: 20px !important;
+            font-size: 40px !important;
         }
     }
 
     .properties {
         .block-name {
-            display: none;
+            left: 20px !important;
+            font-size: 64px;
         }
     }
 
     .composition {
         .block-name {
-            display: none;
+            left: 20px !important;
+            font-size: 64px;
         }
     }
 
     .recommendations {
         .block-name {
-            display: none;
+            left: 20px !important;
+            font-size: 64px;
         }
     }
 
     .video-block {
-        padding-top: 100px;
-        padding-bottom: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
         .block-name {
-            display: none;
+            left: 20px !important;
+            font-size: 64px;
         }
     }
 
@@ -1806,9 +1797,6 @@ input, button {
     }
 
     .product-card {
-        .block-name {
-            display: none;
-        }
 
         .descr-block {
             padding-right: calc(var(--bs-gutter-x) * .5);
@@ -1822,9 +1810,6 @@ input, button {
     }
 
     .properties {
-        .block-name {
-            display: none;
-        }
 
         .img-block {
             order: 0;
@@ -1837,9 +1822,6 @@ input, button {
     }
 
     .composition {
-        .block-name {
-            display: none;
-        }
 
         .img-block {
             order: 0;
@@ -1852,9 +1834,6 @@ input, button {
     }
 
     .recommendations {
-        .block-name {
-            display: none;
-        }
 
         .img-block {
             order: 0;
@@ -1867,9 +1846,6 @@ input, button {
     }
 
     .video-block {
-        .block-name {
-            display: none;
-        }
     }
 
     .slider {

@@ -1106,17 +1106,6 @@ button {
   line-height: 17px;
   color: #FEFEFE;
 }
-.navigation .navigation-title {
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
-  color: #2B2A29;
-  writing-mode: tb-rl;
-  z-index: 500;
-}
-.navigation .navigation-title span {
-  color: #B8B8B8;
-}
 @media screen and (max-width: 1640px) {
   .container {
     max-width: 1500px;
@@ -1328,29 +1317,34 @@ button {
     text-transform: uppercase;
   }
   .product-card .descr-block {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 540px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
     margin: 0 auto;
   }
   .product-card .block-name {
-    display: none;
+    left: 20px !important;
+    font-size: 40px !important;
   }
   .properties .block-name {
-    display: none;
+    left: 20px !important;
+    font-size: 64px;
   }
   .composition .block-name {
-    display: none;
+    left: 20px !important;
+    font-size: 64px;
   }
   .recommendations .block-name {
-    display: none;
+    left: 20px !important;
+    font-size: 64px;
   }
   .video-block {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .video-block .block-name {
-    display: none;
+    left: 20px !important;
+    font-size: 64px;
   }
   .video-block .video-slider-arrows {
     justify-content: right;
@@ -1393,9 +1387,6 @@ button {
     right: 26px;
     border-radius: 0px 18px 0px 18px;
   }
-  .product-card .block-name {
-    display: none;
-  }
   .product-card .descr-block {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -1404,18 +1395,12 @@ button {
     font-size: 24px;
     line-height: 30px;
   }
-  .properties .block-name {
-    display: none;
-  }
   .properties .img-block {
     order: 0;
     margin-bottom: 30px;
   }
   .properties .text-block {
     order: 1;
-  }
-  .composition .block-name {
-    display: none;
   }
   .composition .img-block {
     order: 0;
@@ -1424,18 +1409,12 @@ button {
   .composition .text-block {
     order: 1;
   }
-  .recommendations .block-name {
-    display: none;
-  }
   .recommendations .img-block {
     order: 0;
     margin-bottom: 30px;
   }
   .recommendations .text-block {
     order: 1;
-  }
-  .video-block .block-name {
-    display: none;
   }
   .slider .slider-product {
     right: 50%;

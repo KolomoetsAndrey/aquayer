@@ -135,6 +135,14 @@ $(document).ready(function() {
         }
     };
 
+    if ($('#bgVideo').length) {
+        if ($(window).width() <= '696' ) {
+            $('#bgVideo').attr('poster', '');
+        } else {
+            ;
+        }
+    }
+
     // Video Slider
     // if ( $('.video-slider-main').length ) {
     //     var $slider = $('.video-slider-main')
