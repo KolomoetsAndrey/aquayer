@@ -381,6 +381,7 @@ input, button {
             height: 100%;
             position: relative;
             left: -70px;
+            filter: brightness(70%);
         }
 
         button {
@@ -1225,6 +1226,13 @@ input, button {
     padding-bottom: 160px;
     background: #EAEFF4;
 
+    .slider-contact {
+        display: flex;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) * -.5);
+        margin-left: calc(var(--bs-gutter-x) * -.5);
+    }
+
     .contact-arrows {
         display: none;
     }
@@ -1418,9 +1426,11 @@ input, button {
 
         .slider-video {
             max-height: 500px;
+            height: 40vh;
 
             video {
-                height: inherit;
+                height: auto;
+                width: 100%;
                 left: 0;
             }
         }
@@ -1442,7 +1452,8 @@ input, button {
             .slider-product {
                 right: 50%;
                 transform: translate(50%, 0);
-                top: -190px;
+                height: 25vh;
+                top: -15vh;
             }
 
             .slider-socials {
@@ -1468,7 +1479,7 @@ input, button {
 
     .category {
         h2 {
-            font-size: 40px;
+            font-size: 30px;
             line-height: 60px;
         }
 
@@ -1583,7 +1594,7 @@ input, button {
         }
 
         .category-block {
-            margin: 10px 0;
+            margin: 2px 0;
         }
     }
 
@@ -1623,6 +1634,8 @@ input, button {
         }
 
         .slider-contact {
+            display: flex;
+
             .slick-dots {
                 display: flex;
                 justify-content: center;

@@ -329,6 +329,7 @@ button {
   height: 100%;
   position: relative;
   left: -70px;
+  filter: brightness(70%);
 }
 .slider .slider-video button {
   position: absolute;
@@ -992,6 +993,12 @@ button {
   padding-bottom: 160px;
   background: #EAEFF4;
 }
+.contacts .slider-contact {
+  display: flex;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
 .contacts .contact-arrows {
   display: none;
 }
@@ -1129,9 +1136,11 @@ button {
   }
   .slider .slider-video {
     max-height: 500px;
+    height: 40vh;
   }
   .slider .slider-video video {
-    height: inherit;
+    height: auto;
+    width: 100%;
     left: 0;
   }
   .slider .slider-info {
@@ -1149,7 +1158,8 @@ button {
   .slider .slider-info .slider-product {
     right: 50%;
     transform: translate(50%, 0);
-    top: -190px;
+    height: 25vh;
+    top: -15vh;
   }
   .slider .slider-info .slider-socials {
     display: none;
@@ -1167,7 +1177,7 @@ button {
     max-width: 960px;
   }
   .category h2 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 60px;
   }
   .category .last-word {
@@ -1236,7 +1246,7 @@ button {
     text-align: center;
   }
   .category .category-block {
-    margin: 10px 0;
+    margin: 2px 0;
   }
   .big-logo .big-logo-img {
     width: 100%;
@@ -1264,6 +1274,9 @@ button {
   .contacts .contacts-title {
     font-size: 40px;
     margin-bottom: 0;
+  }
+  .contacts .slider-contact {
+    display: flex;
   }
   .contacts .slider-contact .slick-dots {
     display: flex;
