@@ -1235,7 +1235,7 @@ button {
     text-align: center;
   }
   .category .category-block {
-    margin: 2px 0;
+    margin: 1px 0;
   }
   .big-logo .big-logo-img {
     width: 100%;
@@ -1352,6 +1352,15 @@ button {
   }
 }
 @media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+  .btn-link {
+    padding: 20px 35px;
+  }
+  .slider .slider-info {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
   .header .logo-img {
     width: 170px;
   }
@@ -1390,6 +1399,7 @@ button {
   .product-card .descr-block {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
+    width: 90%;
   }
   .product-card .product-title {
     font-size: 24px;
@@ -1408,6 +1418,7 @@ button {
   }
   .composition .text-block {
     order: 1;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
   .recommendations .img-block {
     order: 0;
@@ -1474,7 +1485,7 @@ button {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  .about-us .about-us-title {
+  .about-us h3 {
     font-size: 40px;
     line-height: 40px;
     text-align: center;
@@ -1489,6 +1500,10 @@ button {
   .get-form {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .get-form .btn-link {
+    padding: 20px 5px;
+    width: 100%;
   }
   .footer .footer-logo-img {
     width: 245px;

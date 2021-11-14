@@ -1580,7 +1580,7 @@ input, button {
         }
 
         .category-block {
-            margin: 2px 0;
+            margin: 1px 0;
         }
     }
 
@@ -1745,6 +1745,20 @@ input, button {
 }
 
 @media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .btn-link {
+        padding: 20px 35px;
+    }
+
+    .slider {
+        .slider-info {
+            padding-left: calc(var(--bs-gutter-x) * .5);
+        }
+    }
+
     .header {
         .logo-img {
             width: 170px;
@@ -1801,6 +1815,7 @@ input, button {
         .descr-block {
             padding-right: calc(var(--bs-gutter-x) * .5);
             padding-left: calc(var(--bs-gutter-x) * .5);
+            width: 90%;
         }
 
         .product-title {
@@ -1830,6 +1845,7 @@ input, button {
 
         .text-block {
             order: 1;
+            padding-left: calc(var(--bs-gutter-x) * .5);
         }
     }
 
@@ -1843,9 +1859,6 @@ input, button {
         .text-block {
             order: 1;
         }
-    }
-
-    .video-block {
     }
 
     .slider {
@@ -1923,7 +1936,7 @@ input, button {
         padding-top: 100px;
         padding-bottom: 100px;
 
-        .about-us-title {
+        h3 {
             font-size: 40px;
             line-height: 40px;
             text-align: center;
@@ -1942,6 +1955,11 @@ input, button {
     .get-form {
         padding-top: 100px;
         padding-bottom: 100px;
+
+        .btn-link {
+            padding: 20px 5px;
+            width: 100%;
+        }
     }
 
     .footer {
