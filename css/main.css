@@ -744,18 +744,26 @@ button {
 .video-block .videoframe {
   position: relative;
 }
+.video-block .videoframe video {
+  position: relative;
+  display: block;
+}
 .video-block .videoframe button {
+  top: 0;
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+.video-block .videoframe button img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: none;
-  background: transparent;
-  width: 90px;
+  width: 80px;
   height: auto;
-}
-.video-block .videoframe button img {
-  width: 100%;
 }
 .video-block .block-name {
   font-weight: bold;
@@ -1299,15 +1307,25 @@ button {
   }
 }
 @media screen and (max-width: 696px) {
+  .slider .slider-info {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: 70px;
+  }
   .slider .slider-info h1 {
     font-size: 30px;
     line-height: 37px;
+    margin-top: 90px;
   }
   .slider .slider-info p {
     width: 80%;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .category h2 {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    padding-left: 0;
+    line-height: 50px;
   }
   .category h2 span {
     font-size: 55px;
@@ -1427,6 +1445,9 @@ button {
   .recommendations .text-block {
     order: 1;
   }
+  .video-block {
+    padding: 0;
+  }
   .slider .slider-product {
     right: 50%;
     transform: translate(50%, 0);
@@ -1507,5 +1528,48 @@ button {
   }
   .footer .footer-logo-img {
     width: 245px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .category {
+    padding-top: 80px;
+  }
+  .category h2 {
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 80px;
+  }
+  .category h2 span {
+    font-size: 35px;
+  }
+  .category .last-word {
+    font-size: 40px;
+  }
+  .properties .properties-title {
+    font-size: 24px;
+  }
+  .properties .block-name {
+    font-size: 45px;
+  }
+  .composition .composition-title {
+    font-size: 24px;
+  }
+  .composition .block-name {
+    font-size: 45px;
+  }
+  .recommendations .recommendations-title {
+    font-size: 24px;
+  }
+  .recommendations .block-name {
+    font-size: 45px;
+  }
+  .video-block .block-name {
+    font-size: 45px;
+  }
+  .map .map-title {
+    font-size: 34px;
+  }
+  .partners .partners-title {
+    font-size: 34px;
   }
 }

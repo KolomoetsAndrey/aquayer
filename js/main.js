@@ -138,6 +138,7 @@ $(document).ready(function() {
     if ($('#bgVideo').length) {
         if ($(window).width() <= '696' ) {
             $('#bgVideo').attr('poster', '');
+            $('#bgVideo').attr('height', '400');
         } else {
             ;
         }

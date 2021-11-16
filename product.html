@@ -237,7 +237,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="videoframe">
-                        <video id="bgVideo" preload="auto" height="400" width="100%" name="media" poster="images/videobg.png">
+                        <video id="bgVideo" preload="auto" height="600" width="100%" name="media" poster="images/videobg.png">
                             <source src="http://aquayer.com/video/algizid-co2.mp4" type="video/mp4">
                         </video>
                         <button onclick="playPause()">
@@ -248,29 +248,15 @@
                             function playPause() { 
                                 if (myVideo.paused) {
                                     myVideo.play(); 
-                                    document.getElementById("playPause").src = "images/stop-btn.png";
+                                    document.getElementById("playPause").style.display = "none";
                                 } else {
                                     myVideo.pause();
                                     document.getElementById("playPause").src = "images/play-btn.png";
+                                    document.getElementById("playPause").style.display = "block";
                                 }
                             };
                         </script>
                     </div>
-                    <!-- <div id="video-slider">
-                        <div class="video-slider-main">
-                            <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            <div class="slide"><iframe width="100%" height="400" src="https://www.youtube.com/embed/wB8VpnfnNY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        </div>
-                        <div class="video-slider-thmb">
-                            <div class="slide"><img src="images/video-thumbnail.png" alt="" class="img-responsive"></div>
-                            <div class="slide"><img src="images/video-thumbnail.png" alt="" class="img-responsive"></div>
-                            <div class="slide"><img src="images/video-thumbnail.png" alt="" class="img-responsive"></div>
-                            <div class="slide"><img src="images/video-thumbnail.png" alt="" class="img-responsive"></div>
-                        </div>
-                        <div class="video-slider-arrows"></div>
-                    </div> -->
                     <span class="block-name">Видео</span>
                 </div>
             </div>
